@@ -1,0 +1,58 @@
+.container{
+	background-color:#F5F5F5;
+	overflow: hidden;
+	position: relative;
+	margin:50px auto;
+}
+.panel{
+	overflow: hidden;
+}
+.item{
+	background-color: #fff;
+	width:220px;
+	margin:21px 0 21px 21px;
+	float:left;/*浮动*/
+	position: relative;
+}
+.panel .item{
+	border-top-width: 1px;
+	border-top-style: solid
+}
+.panel .item:nth-child(odd){
+	border-top-color:#f00;
+}
+.panel .item:nth-child(2n){
+	border-top-color: #83C44E;
+}
+.panel .item:nth-child(3n){
+	border-top-color:#FFAC13;
+}
+.panel .item:nth-child(4n){
+	border-top-color:#2196F3;
+}
+.desc-info p{
+	font-size:12px;
+	text-align: center;
+	margin:10px;
+}
+/*向被选中的元素后添加指定内容*/
+.desc-info p:nth-child(3):after{
+	content:"元";
+}
+.desc-info p:nth-child(1){
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+.desc-info p:nth-child(2){
+	color:#bbb;
+}
+.desc-info p:nth-child(3){
+	font-size: 14px;
+	color:#FF6700;
+	font-family: "微软雅黑"
+}
+.item:hover{
+	box-shadow:0 15px 30px rgba(0,0,0,0.1);
+	transform: translate3d(0,-2px,0);/*位移，3d效果 朝上方移动2像素*/
+	transition: all 0.2s linear;/*动画，0,2秒过度，匀速*/
+}

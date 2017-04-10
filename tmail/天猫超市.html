@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>天猫超市</title>
+	<link rel="stylesheet" href="css/tiammaochaoshi.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript">
+		var index=-750;
+		$(document).ready(function(){
+			var a=function(){
+				$("#ul_image li:first").animate({"margin-left":index+"px"},1000,function(){
+					var s=$("#ul_image li:first img").attr("src");
+					$("#ul_image li:first").remove();
+					$("#ul_image").append("<li><img src='"+s+"' /></li>");
+				});
+			}
+			setInterval(a,3000);
+			$(".ul_nav2 li:first").hover(function(){
+				$(this).children("a").css("color","red");
+				$(this).css("backgroundColor","white");
+				$(".ul_nav2 .ul_child").stop().slideDown();
+
+			},function(){
+				$(this).children("a").css("color","#999");
+				$(this).css("backgroundColor","#f2f2f2");
+				$(".ul_nav2 .ul_child").stop().slideUp();
+			});
+
+		})
+
+		function change(circle){
+			circle.style.backgroundColor="#8dd514";
+			circle.style.border="1px solid black";
+			circle.style.color="white";
+			circle.style.textDecoration="underline";
+		}
+		function recover(circle){
+			circle.style.backgroundColor="white";
+			circle.style.border="1px solid white";
+			circle.style.color="#2f2f2f";
+			circle.style.textDecoration="none";
+		}
+		function enter(getA){
+			var getI=getA.children[0];
+			getI.innerHTML="∧";
+		}
+		function out(getA){
+			var getI=getA.children[0];
+			getI.innerHTML="∨";
+		}
+	</script>
+</head>
+<body>
+	<div class="header">
+		<span class="span1"><a href="天猫首页.html">天猫首页</a></span>
+		<span class="span2">喵，欢迎来天猫</span>
+		<ul class="ul_nav1" id="ul_a">
+			<li><a href="#">请登入</a></li>
+			<li><a href="#">免费注册</a></li>
+		</ul>
+		<ul class="ul_nav2">
+			<li><a href="#">
+					我的淘宝 <img src="images/天猫/三角.png" alt="三角形" />
+				</a>
+				<ul class="ul_child">
+					<li><a href="#">已买到的宝贝</a></li>
+					<li><a href="#">已卖出的宝贝</a></li>
+				</ul>
+			</li>
+			<li><a href="#">我关注的品牌</a></li>
+		</ul>
+		<ul class="ul_nav3">
+			<li><a href="#">购物车</a></li>
+			<li><a href="#">收藏夹</a></li>
+			<li><a href="#">手机版</a></li>
+			<li><a href="#">淘宝网</a></li>
+			<li><a href="#">企业网</a></li>
+		</ul>
+		<ul class="ul_nav4">
+			<li><a href="#">商家支持</a></li>
+			<li><a href="#">网站导航</a></li>
+		</ul>
+	</div>
+	<div class="search">
+		<div class="left"></div>
+		<div class="place">
+			<a id="a" href="#" onmouseenter="enter(this)" onmouseout="out(this)">
+				长沙<i onmouseenter="enter(this)" onmouseout="out(this)">∨</i>
+			</a>
+		</div>
+		<div class="center">
+			<div class="first">
+				<form action="">
+					<input type="text" placeholder="88包邮，轻松逛“超市”" />
+					<input type="submit" value="搜索" />
+				</form>
+			</div>
+			<div class="second">
+				<p>
+					<a href="#">酒水</a>
+					<span>|</span>
+					<a href="#">纸巾</a>
+					<span>|</span>
+					<a href="#">卫生巾</a>
+					<span>|</span>
+					<a href="#">垃圾袋</a>
+					<span>|</span>
+					<a href="#">牛奶</a>
+					<span>|</span>
+					<a href="#">袜子</a>
+				</p>
+			</div>
+		</div>
+		<div class="right">
+			<ul class="ul1">
+				<li>
+					<a href="#">
+						<s>①</s>一站式购齐
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						满88包邮
+					</a>
+				</li>
+				<li style="margin-left:0px">
+					<img src="images/天猫超市/TB2-36-36.png" alt="" style="cursor:pointer;vertical-align:middle" />
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="main">
+		<div class="top">
+			<div class="left">
+				<p>所有产品分类</p>
+			</div>
+			<div class="right">
+				<p>
+					<a href="#">我的福利</a>
+				</p>
+				<ul class="nav">
+					<li><a href="天猫首页.html">首页</a></li>
+					<li><a href="#">量贩装</a></li>
+					<li><a href="#">企业采购</a></li>
+					<li><a href="#">大家电</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="middle">
+			<div class="left">
+				<div class="left_child">
+					<div class="last">
+						<h4>
+							<a href="#">进口食品</a>
+							<b>〉</b>
+						</h4>
+						<p>
+							<a href="#">牛奶</a> <a href="#">零食</a> <a href="#">饼干</a> <a href="#">方便面</a> <a href="#">粮油</a>
+						</p>
+					</div>
+					<hr width="80%" size="1px" color="#e2e2e2" />
+				</div>
+				<div class="left_child">
+					<div class="last">
+						<h4>
+							<a href="#">粮油副食</a>
+							<b>〉</b>
+						</h4>
+						<p>
+							<a href="#">油</a> <a href="#">大米</a> <a href="#">调料</a> <a href="#">方便面</a> <a href="#">火腿肠</a>
+						</p>
+					</div>
+					<hr width="80%" size="1px" color="#e2e2e2" />
+				</div>
+				<div class="left_child">
+					<div class="last">
+						<h4>
+							<a href="#">美容洗护</a>
+							<b>〉</b>
+						</h4>
+						<p>
+							<a href="#">洗发</a> <a href="#">沐浴</a> <a href="#">牙膏</a> <a href="#">洁面</a> <a href="#">卫生巾</a>
+						</p>
+					</div>
+					<hr width="80%" size="1px" color="#e2e2e2" />
+				</div>
+				<div class="left_child">
+					<div class="last">
+						<h4>
+							<a href="#">家居家电</a>
+							<b>〉</b>
+						</h4>
+						<p>
+							<a href="#">毛巾</a> <a href="#">家电</a> <a href="#">玻璃杯</a> <a href="#">衣架</a> <a href="#">锅</a>
+						</p>
+					</div>
+					<hr width="80%" size="1px" color="#e2e2e2" />
+				</div>
+				<div class="left_child">
+					<div class="last">
+						<h4>
+							<a href="#">家庭清洁</a>
+							<b>〉</b>
+						</h4>
+						<p>
+							<a href="#">纸</a> <a href="#">洗衣</a> <a href="#">洗洁精</a> <a href="#">垃圾袋</a> <a href="#">洁厕</a>
+						</p>
+					</div>
+					<hr width="80%" size="1px" color="#e2e2e2" />
+				</div>
+				<div class="left_child">
+					<div class="last">
+						<h4>
+							<a href="#">母婴用品</a>
+							<b>〉</b>
+						</h4>
+						<p>
+							<a href="#">纸尿裤</a> <a href="#">奶粉</a> <a href="#">湿巾</a> <a href="#">洗护</a> <a href="#">玩具</a>
+						</p>
+					</div>
+					<hr width="80%" size="1px" color="#e2e2e2" />
+				</div>
+				<div class="left_child">
+					<div class="last">
+						<h4>
+							<a href="#">生活服务</a>
+							<b>〉</b>
+						</h4>
+						<p>
+							<a href="#">信用卡还贷</a> <a href="#">转账</a> <a href="#">充话费</a> <a href="#">点券</a>
+						</p>
+					</div>
+					<hr width="80%" size="1px" color="#e2e2e2" />
+				</div>
+				<div class="left_child">
+					<div class="last">
+						<h4>
+							<a href="#">进口食品</a>
+							<b>〉</b>
+						</h4>
+						<p>
+							<a href="#">牛奶</a> <a href="#">零食</a> <a href="#">饼干</a> <a href="#">方便面</a> <a href="#">粮油</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="center">
+				<div class="top">
+					<ul id="ul_image">
+						<li>
+							<image src="images/天猫超市/TB3-750-291.jpg" />
+						</li>
+						<li>
+							<image src="images/天猫超市/TB4-750-291.jpg" />
+						</li>
+						<li>
+							<image src="images/天猫超市/TB5-750-291.jpg" />
+						</li>
+						<li>
+							<image src="images/天猫超市/TB6-750-291.jpg" />
+						</li>
+						<li>
+							<image src="images/天猫超市/TB7-750-291.jpg" />
+						</li>
+						<li>
+							<image src="images/天猫超市/TB8-750-291.jpg" />
+						</li>
+						<li>
+							<image src="images/天猫超市/TB9-750-291.jpg" />
+						</li>
+					</ul>
+				</div>
+				<div class="bottom">
+					<a href="#"><img class="img1" src="images/天猫超市/TB10-249-120.jpg" alt="淘零食" /></a>
+					<a href="#"><img class="img2" src="images/天猫超市/TB11-249-120.jpg" alt="打折" /></a>
+					<a href="#"><img class="img3" src="images/天猫超市/TB12-249-120.jpg" alt="家庭清洁剂" /><a>
+					<a href="#"><img class="img4" src="images/天猫超市/TB13-250-172.jpg" alt="家庭清洁剂" /></a>
+					<a href="#"><img class="img5" src="images/天猫超市/TB14-250-172.jpg" alt="家庭清洁剂" /></a>
+					<a href="#"><img class="img6" src="images/天猫超市/TB15-250-172.jpg" alt="家庭清洁剂" /></a>
+				</div>
+			</div>
+			<div class="right">
+				<div class="top">
+					<p class="p1">
+						<img src="images/天猫超市/icon-user.png" alt="人物" />
+						我的福利
+					</p>
+					<p class="p2">
+						<a href="#"><img src="images/天猫超市/logo-lottery.png" alt="翻牌"></a><br />
+						<span>
+							亲，快<a href="#">登入</a>查看您的游戏机会～
+						</span>
+					</p>
+					<hr width="80%" size="1px" color="#faed7d" />
+					<div class="last">
+						<p>
+							<a href="#">
+								<img src="images/天猫超市/logo-coupon.png" alt="优惠券" /><br />
+								优惠券
+							</a>
+						</p>
+						<p>
+							<a href="#">
+								<img src="images/天猫超市/logo-intime.png" alt="享淘卡" /><br />
+								享淘卡
+							</a>
+						</p>
+						<p style="border-right:none">
+							<a href="#">
+								<img src="images/天猫超市/logo-bought.png" alt="我常买" /><br />
+								我常买
+							</a>
+						</p>
+					</div>
+				</div>
+				<div class="bottom">
+					<a href="#">
+						<img src="images/天猫超市/TB16- 188-170.jpg" alt="我常买" />
+						<img src="images/天猫超市/TB17- 188-170.jpg" alt="我常买" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h2>生鲜水果</h2>
+	<div class="content">
+		<div class="div1">
+			<div class="top">
+				<div id="circleAll" >
+					<a href="#" onmouseenter="change(this)" onmouseout="recover(this)">龙眼</a>
+					<img class="img1" src="images/天猫超市/hot.png" alt="hot" />
+					<a href="#" onmouseenter="change(this)" onmouseout="recover(this)">苹果</a>
+					<a href="#" onmouseenter="change(this)" onmouseout="recover(this)">奇异果</a>
+					<img class="img2" src="images/天猫超市/hot.png" alt="hot" />
+					<a href="#" onmouseenter="change(this)" onmouseout="recover(this)">冰鲜猪肉</a>
+					<img class="img3" src="images/天猫超市/hot.png" alt="hot" />
+					<a href="#" onmouseenter="change(this)" onmouseout="recover(this)">土鸡蛋</a>
+					<img class="img4" src="images/天猫超市/hot.png" alt="hot" />
+					<a href="#" onmouseenter="change(this)" onmouseout="recover(this)">牛肉</a>
+					<img class="img5" src="images/天猫超市/hot.png" alt="hot" />
+					<a href="#" onmouseenter="change(this)" onmouseout="recover(this)">虾</a>
+					<img class="img6" src="images/天猫超市/hot.png" alt="hot" />
+					<a href="#" onmouseenter="change(this)" onmouseout="recover(this)">鸡肉</a>
+					<a href="#" onmouseenter="change(this)" onmouseout="recover(this)">素食</a>
+				</div>
+			</div>
+			<div class="bottom">
+				<img src="images/天猫超市/TB18-240-296.jpg" alt="任性刷火锅" />
+			</div>
+		</div>
+		<div class="div2">
+			<ul class="ul_image">
+				<li>
+					<div class="li1">
+						<a href="#">
+							<img class="img1" src="images/天猫超市/TB20-160-160.jpg" alt="TB20" />
+						</a>
+						<p class="p1">柔滑醇香 森林黄油</p>
+						<p class="p2">智利牛油果 4个</p>
+						<p class="p3">
+							<i>¥</i>
+							<span>37</span>
+						</p>
+						<p class="p4"></p>
+					</div>
+					<div class="li1">
+						<a href="#">
+							<img class="sold_out" src="images/天猫超市/TB.png" alt="卖光了" />
+							<img class="img1" src="images/天猫超市/TB19-160-160.jpg" alt="TB20" />
+						</a>
+						<p class="p1">内蒙直供 火锅必备</p>
+						<p class="p2">内蒙羔羊牛卷 250g/每盒</p>
+						<p class="p3">
+							<i>¥</i>
+							<span>29</span>
+						</p>
+						<p class="p4"></p>
+					</div>
+				</li>
+				<li>
+					<div class="li1">
+						<a href="#">
+							<img class="img1" src="images/天猫超市/TB21-160-160.jpg" alt="TB20" />
+						</a>
+						<p class="p1">软糯香甜 明艳亮黄</p>
+						<p class="p2">进口香蕉 6根</p>
+						<p class="p3">
+							<i>¥</i>
+							<span>15.8</span>
+						</p>
+						<p class="p4"></p>
+					</div>
+					<div class="li1">
+						<a href="#">
+							<img class="img1" src="images/天猫超市/TB19-160-160.jpg" alt="TB22" />
+						</a>
+						<p class="p1">饱满弹嫩 鲜美不腥</p>
+						<p class="p2">南美白虾仁 250g/每包</p>
+						<p class="p3">
+							<i>¥</i>
+							<span>46</span>
+						</p>
+						<p class="p4"></p>
+					</div>
+				</li>
+				<li>
+					<div class="li1">
+						<a href="#">
+							<img class="img1" src="images/天猫超市/TB23-160-160.jpg" alt="TB20" />
+						</a>
+						<p class="p1">清甜美味 水润在心</p>
+						<p class="p2">泰国进口龙眼 1kg</p>
+						<p class="p3">
+							<i>¥</i>
+							<span>23.8</span>
+						</p>
+						<p class="p4"></p>
+					</div>
+					<div class="li1">
+						<a href="#">
+							<img class="img1" src="images/天猫超市/TB24-160-160.jpg" alt="TB20" />
+						</a>
+						<p class="p1">香醇味浓 炖煮佳选</p>
+						<p class="p2">澳洲YP级精修牛腩块 500g</p>
+						<p class="p3">
+							<i>¥</i>
+							<span>48</span>
+						</p>
+						<p class="p4"></p>
+					</div>
+				</li>
+				<li>
+					<div class="li1">
+						<a href="#">
+							<img class="img1" src="images/天猫超市/TB25-160-160.jpg" alt="TB20" />
+						</a>
+						<p class="p1">庄园直采 空运直达</p>
+						<p class="p2">智利红樱桃 500g</p>
+						<p class="p3">
+							<i>¥</i>
+							<span>49.9</span>
+						</p>
+						<p class="p4"></p>
+					</div>
+					<div class="li1">
+						<a href="#">
+							<img class="sold_out1" src="images/天猫超市/TB.png" alt="卖光了" />
+							<img class="img1" src="images/天猫超市/TB26-160-160-.jpg" alt="TB20" />
+						</a>
+						<p class="p1">无公害 新鲜土鸡蛋</p>
+						<p class="p2">青山流水土鸡蛋 12枚</p>
+						<p class="p3">
+							<i>¥</i>
+							<span>14.9</span>
+						</p>
+						<p class="p4" style="background-image:url('images/天猫超市/c2.png')"></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="div3">
+			<img src="images/天猫超市/TB27-150-39.png" alt="TB27" />
+			<a href="#">
+				<img src="images/天猫超市/TB28-150-263.jpg" alt="TB27" />
+			</a>
+			<a href="#">
+				<img src="images/天猫超市/TB29-150-263.jpg" alt="TB27" />
+			</a>
+		</div>
+	</div>
+	<br /><hr /><br />
+	<div class="footer">
+		<div class="first">
+			<ul class="footer_nav">
+				<li>购物指南
+					<ul class="ul_child">
+						<li><a href="#">免费注册</a></li>
+						<li><a href="#">开通支付宝</a></li>
+						<li><a href="#">支付宝充值</a></li>
+					</ul>
+				</li>
+				<li>天猫保障
+					<ul class="ul_child">
+						<li><a href="#">发票保障</a></li>
+						<li><a href="#">售后规则</a></li>
+						<li><a href="#">缺货赔付</a></li>
+					</ul>
+				</li>
+				<li>支付方式
+					<ul class="ul_child">
+						<li><a href="#">快捷支付</a></li>
+						<li><a href="#">信用卡</a></li>
+						<li><a href="#">余额宝</a></li>
+						<li><a href="#">蚂蚁花呗</a></li>
+						<li><a href="#">货到付款</a></li>
+					</ul>
+				</li>
+				<li>商家服务
+					<ul class="ul_child">
+						<li><a href="#">商家入驻</a></li>
+						<li><a href="#">商家中心</a></li>
+						<li><a href="#">天猫智库</a></li>
+						<li><a href="#">天猫规则</a></li>
+						<li><a href="#">物流服务</a></li>
+						<li><a href="#">喵言喵语</a></li>
+						<li><a href="#">运营维护</a></li>
+					</ul>
+				</li>
+				<li>手机天猫
+					<ul class="ul_child">
+						<li><img src="images/天猫/TB105-105.png" alt="二维码"></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="last">
+			<ul class="ul1">
+				<li><a href="#">关于天猫</a></li>
+				<li><a href="#">帮助中心</a></li>
+				<li><a href="#">开放平台</a></li>
+				<li><a href="#">诚聘英才</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">网站合作</a></li>
+				<li><a href="#">法律声明</a></li>
+				<li><a href="#">知识产权</a></li>
+				<li><a href="#">廉政举报</a></li>
+			</ul>
+			<p class="p1">
+				<a href="#">阿里巴巴集团</a><span>|</span><a href="#">淘宝网</a><span>|</span><a href="#">天猫</a><span>|</span><a href="#">聚划算</a><span>|</span><a href="#">全球速卖通</a><span>|</span><a href="#">阿里巴巴国际交易市场</a><span>|</span><a href="#">1688</a><span>|</span><a href="#">阿里妈妈</a><span>|</span><a href="#">飞猪</a><span>|</span><a href="#">阿里云计算</a><span>|</span><a href="#">YunOS</a><span>|</span><a href="#">阿里通讯</a><span>|</span><a href="#">万网</a><span>|</span><a href="#">高德</a><span>|</span><a href="#">UC</a><span>|</span><a href="#">友盟</a><span>|</span><a href="#">虾米</a><span>}</span><a href="#">阿里星球</a><span>|</span><a href="#">来往</a><span>|</span><a href="#">钉钉</a><span>|</span><a href="#">支付宝</a>
+			</p>
+			<p class="p2">
+				<span>增值电信业务许可证：浙B2-20110446</span>
+				<span>网络文化经营许可证：浙网文[2015]0295-065号</span>
+				<span>互联网医疗保健信息服务 审核同意书 浙卫网审【2014】6号 </span>
+			</p>
+			<p class="p3">互联网药品信息服务资质证书编号：浙-（经营性）-2012-0005</p>
+			<p class="p4">&copy;2003-2016 TMALL.COM 版权所有</p>
+		</div>
+	</div>
+</body>
+</html>

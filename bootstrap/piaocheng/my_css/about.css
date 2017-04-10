@@ -1,0 +1,23 @@
+#case{
+	padding: 40px 0;
+	background: #eee;
+	text-align: center;
+}
+#case a{
+	color: cornflowerblue;
+}
+#case h3{
+	margin: 0 0 10px 0;
+	padding: 20px 15px;
+	border-bottom: 1px solid #eee;
+	font-size: 18px;
+}
+#case p{
+	line-height: 2;
+	font-size: 13px;
+}
+#case .about{
+	background: #fff;
+	box-shadow: 2px 2px 3px #ccc;
+	padding-bottom: 20px;
+}

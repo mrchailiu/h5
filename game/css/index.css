@@ -1,0 +1,35 @@
+body{
+    margin:0;
+    padding:0;
+}
+header,footer{
+    height:50px;
+    background-color:#424242;
+    text-align: center;
+    line-height: 50px;
+    color:#fff;
+    font-size: 20px;
+    font-family:sans-serif;
+    font-weight: bold;
+    position: relative;
+    z-index: 1001;
+}
+footer{
+    font-style:italic;
+}
+section{
+    position: relative;
+    background:url('../imgs/map/1.jpg') no-repeat;
+    cursor:url('../imgs/cursor/1.cur'),default;
+}
+.role{
+    width:100px;
+    height: 105px;
+    position: absolute;
+    z-index: 1000;
+}
+#blood-bar{
+    height:5px;
+    width:100px;
+    background-color: #f00;
+}

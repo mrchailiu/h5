@@ -1,0 +1,73 @@
+/*标签(元素)选择器*/
+body{
+	padding:0;	/*重置内边距*/
+	margin:0; /*重置外边距*/
+}
+canvas,body,div{
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+}
+/*类选择器*/
+.title{
+	height:50px;	/*设置高度50像素*/
+	background-color:#424242;/*设置背景色*/
+	color:#fff;	/*设置文本颜色为白色*/
+	text-align:center; /*设置文本对齐方式为居中对齐*/
+	line-height:50px;
+	font-size:1.5em;
+}
+.container{
+	position:relative;/*设置定位方式:相对定位*/
+}
+
+#map{
+	position:absolute;
+}
+#role{
+	position:absolute;
+}
+
+.help{
+	width:300px;
+	height:200px;
+	border:1px solid #FF6700;
+	background-color:#fff;
+	border-radius:10px;
+	padding:10px;
+	position:absolute;
+	z-index: 1000;
+	top:10%;
+	left:35%;
+	display:none;/*隐藏*/
+}
+#wrap{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display:none;/*隐藏*/
+	/*width:100%;
+	height:768px;*/
+	background-color: rgba(0,0,0,0.8);
+}
+.help div{
+	width:100%;
+}
+.help div:nth-child(1){
+	text-align:center;
+	font-weight: bold;
+}
+.btn{
+	width:50%;
+	height:30px;
+	margin-left:25%;
+	background-color: #fff;
+	border:1px solid #FF6700;
+	cursor:pointer;	/*设置指针的样式*/
+	border-radius:5px;
+}
+.btn:hover{
+	background-color:#FF6700;
+	color:#fff;
+}
+

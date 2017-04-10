@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>天猫首页</title>
+	<link rel="stylesheet" href="css/tianmiao.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript">
+		var index=-675;
+		$(document).ready(function(){
+			var a=function(){
+				$("#ul_image li:first").animate({"margin-left":index+"px"},1000,function(){
+					var s=$("#ul_image li:first img").attr("src");
+					$("#ul_image li:first").remove();
+					$("#ul_image").append("<li><img src='"+s+"' /></li>");
+				});
+			}
+			setInterval(a,3000);
+			$(".ul_nav2 li:first").hover(function(){
+				$(this).children("a").css("color","red");
+				$(this).css("backgroundColor","white");
+				$(".ul_nav2 .ul_child").stop().slideDown();
+
+			},function(){
+				$(this).children("a").css("color","#999");
+				$(this).css("backgroundColor","#f2f2f2");
+				$(".ul_nav2 .ul_child").stop().slideUp();
+			});
+
+		})
+		function showLeaguer(){
+			var bg=document.getElementById('bg');
+			var leaguer_border=document.getElementById('leaguer_border');
+			var leaguer=document.getElementById("leaguer");
+			bg.style.display="block";
+			leaguer_border.style.display="block";
+			leaguer.style.display="block";
+		}
+		function hideLeaguer(){
+			var bg=document.getElementById('bg');
+			var leaguer_border=document.getElementById('leaguer_border');
+			var leaguer=document.getElementById("leaguer");
+			bg.style.display="none";
+			leaguer_border.style.display="none";
+			leaguer.style.display="none";
+		}
+		function showOutline(getInput){
+			var out=getInput.parentNode.parentNode;
+			out.style.border="1px solid #33cccc";
+		}
+		function hideOutline(getInput){
+			var out=getInput.parentNode.parentNode;
+			out.style.border="1px solid lightgray";
+		}
+		function changePage(image){
+			if(image.src.match("3")){
+				var bottom_copy=document.getElementById("bottom_copy");
+				var bottom=image.parentNode;
+				bottom.style.display="none";
+				bottom_copy.style.display="block";
+			}
+			else{
+				var bottom=document.getElementById("bottom");
+				var bottom_copy=image.parentNode;
+				bottom.style.display="block";
+				bottom_copy.style.display="none";
+			}	
+		}
+		function changePage1(image){
+			var bottom=document.getElementById("bottom");
+			var bottom_copy=image.parentNode.parentNode;
+			bottom.style.display="block";
+			bottom_copy.style.display="none";
+		}
+	</script>
+</head>
+<body>
+	<div class="header">
+		<span>喵，欢迎来天猫</span>
+		<ul class="ul_nav1" id="ul_a">
+			<li><a href="#">请登入</a></li>
+			<li><a href="#">免费注册</a></li>
+		</ul>
+		<ul class="ul_nav2">
+			<li><a href="#">
+					我的淘宝 <img src="images/天猫/三角.png" alt="三角形" />
+				</a>
+				<ul class="ul_child">
+					<li><a href="#">已买到的宝贝</a></li>
+					<li><a href="#">已卖出的宝贝</a></li>
+				</ul>
+			</li>
+			<li><a href="#">我关注的品牌</a></li>
+		</ul>
+		<ul class="ul_nav3">
+			<li><a href="#">购物车</a></li>
+			<li><a href="#">收藏夹</a></li>
+			<li><a href="#">手机版</a></li>
+			<li><a href="#">淘宝网</a></li>
+			<li><a href="#">企业网</a></li>
+		</ul>
+		<ul class="ul_nav4">
+			<li><a href="#">商家支持</a></li>
+			<li><a href="#">网站导航</a></li>
+		</ul>
+	</div>
+	<div class="search">
+		<div class="left">
+			<img src="images/天猫/5.png" alt="">
+		</div>
+		<div class="right">
+			<div class="first">
+				<form action="">
+					<input type="text" placeholder="大牌鞋靴一折起" />
+					<input type="submit" value="搜索" />
+				</form>
+			</div>
+			<div class="second">
+				<ul class="ul_nav">
+					<li><a href="#">毛呢大衣</a></li>
+					<li><a href="#">零食</a></li>
+					<li><a href="#">四件套</a></li>
+					<li><a href="#">电饭煲</a></li>
+					<li><a href="#">保暖内衣</a></li>
+					<li><a href="#">靴子</a></li>
+					<li><a href="#">电视柜</a></li>
+					<li><a href="#">羽绒服男</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="top">
+			<div class="left">
+				<p>商品分类服务</p>
+			</div>
+			<div class="right">
+				<ul class="nav">
+					<li><a href="天猫超市.html" target="_blank">天猫超市</a></li>
+					<li><a href="#" onclick="showLeaguer()">天猫会员</a></li>
+					<li><a href="天猫国际.html" target="_blank">天猫国际</a></li>
+					<li><a href="品牌街.html" target="_blank">品牌街</a></li>
+					<li><a href="#">电器城</a></li>
+					<li><a href="#">医药馆</a></li>
+					<li><a href="#">喵鲜生</a></li>
+					<li><a href="#">营业厅</a></li>
+					<li><a href="#">飞猪旅行</a></li>
+					<li><a href="#">苏宁易购</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="middle">
+			<div class="left">
+				<div class="left_child">
+					<div class="first">
+						<p>女装</p>
+					</div>
+					<div class="last">
+						<p>
+							<a href="#">女士新品</a> <a href="#">T恤</a> <a href="#">连衣裙</a>
+						</p>
+						<p>
+							<a href="#">衬衫</a> <a href="#">雪纺衫</a> <a href="#">风衣</a>
+						</p>
+					</div>
+				</div>
+				<div class="left_child">
+					<div class="first">
+						<p>数码</p>
+					</div>
+					<div class="last">
+						<p>
+							<a href="#">笔记本</a> <a href="#">小米</a> <a href="#">DIY</a>
+						</p>
+						<p>
+							<a href="#">花呗分期</a> <a href="#">平板电脑</a> <a href="#">单反<a>
+						</p>
+					</div>
+				</div>
+				<div class="left_child">
+					<div class="first">
+						<p>男装</p>
+					</div>
+					<div class="last">
+						<p>
+							<a href="#">飞行夹克</a> <a href="#">单西</a> <a href="#">夹克</a>
+						</p>
+						<p>
+							<a href="#">T恤</a> <a href="#">休闲裤</a> <a href="#">牛仔裤</a>
+						</p>
+					</div>
+				</div>
+				<div class="left_child">
+					<div class="first">
+						<p>家具</p>
+					</div>
+					<div class="last">
+						<p>
+							<a href="#">四件套</a> <a href="#">沙发</a> <a href="#">吸顶灯</a>
+						</p>
+						<p>
+							<a href="#">马桶</a> <a href="#">被套</a> <a href="#">电视柜</a>
+						</p>
+					</div>
+				</div>
+				<div class="left_child">
+					<div class="first">
+						<p>美妆</p>
+					</div>
+					<div class="last">
+						<p>
+							<a href="#">官方直售</a> <a href="#">面膜</a> <a href="#">护肤套装</a>
+						</p>
+						<p>
+							<a href="#">口红</a> <a href="#">香水</a> <a href="#">洗发水</a>
+						</p>
+					</div>
+				</div>
+				<div class="left_child">
+					<div class="first">
+						<p>母婴</p>
+					</div>
+					<div class="last">
+						<p>
+							<a href="#">亲子装</a> <a href="#">套装</a> <a href="#">运动鞋</a>
+						</p>
+						<p>
+							<a href="#">连衣裙</a> <a href="#">婴儿玩具</a> <a href="#">牛奶粉</a>
+						</p>
+					</div>
+				</div>
+				<div class="left_child">
+					<div class="first">
+						<p>美食</p>
+					</div>
+					<div class="last">
+						<p>
+							<a href="#">坚果</a> <a href="#">蜜饯</a> <a href="#">进口零食</a>
+						</p>
+						<p>
+							<a href="#">点心</a> <a href="#">茶叶</a> <a href="#">葡萄酒</a>
+						</p>
+					</div>
+				</div>
+				<div class="left_child">
+					<div class="first">
+						<p>运动</p>
+					</div>
+					<div class="last">
+						<p>
+							<a href="#">鱼竿</a> <a href="#">软壳衣</a> <a href="#">板鞋</a>
+						</p>
+						<p>
+							<a href="#">军刀</a> <a href="#">运动裤</a> <a href="#">跑步鞋</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="center">
+				<div class="top">
+					<ul id="ul_image">
+						<li>
+							<image src="images/天猫/TB730-300.jpg" />
+						</li>
+						<li>
+							<image src="images/天猫/TB1-730-300.jpg" />
+						</li>
+						<li>
+							<image src="images/天猫/TB2-730-300.jpg" />
+						</li>
+						<li>
+							<image src="images/天猫/TB3-730-300.jpg" />
+						</li>
+						<li>
+							<image src="images/天猫/TB4-730-300.jpg" />
+						</li>
+					</ul>
+					<!-- <img src="images/天猫/TB730-300.jpg" alt="全明星" /> -->
+				</div>
+				<div class="bottom">
+					<img src="images/天猫/TB1.jpg" alt="大牌手机" />
+					<img src="images/天猫/TB2.jpg" alt="安全出行" />
+					<img src="images/天猫/TB4.jpg" alt="优质儿童床品" />
+					<img src="images/天猫/TB5.jpg" alt="进口不粘锅" />
+				</div>
+			</div>
+			<div class="right">
+				<img src="images/天猫/TB190-480.jpg" alt="图片" />
+			</div>
+			<div class="bottom">
+				<img src="images/天猫/TB1190-90.jpg" alt="11狂欢" />
+			</div>
+		</div>
+	</div>
+	<br /><hr /><br />
+	<div class="footer_img">
+		<a href="#"><img src="images/天猫/TB31.jpg" alt=""></a>
+	</div>
+	<div class="footer">
+		<div class="first">
+			<ul class="footer_nav">
+				<li>购物指南
+					<ul class="ul_child">
+						<li><a href="#">免费注册</a></li>
+						<li><a href="#">开通支付宝</a></li>
+						<li><a href="#">支付宝充值</a></li>
+					</ul>
+				</li>
+				<li>天猫保障
+					<ul class="ul_child">
+						<li><a href="#">发票保障</a></li>
+						<li><a href="#">售后规则</a></li>
+						<li><a href="#">缺货赔付</a></li>
+					</ul>
+				</li>
+				<li>支付方式
+					<ul class="ul_child">
+						<li><a href="#">快捷支付</a></li>
+						<li><a href="#">信用卡</a></li>
+						<li><a href="#">余额宝</a></li>
+						<li><a href="#">蚂蚁花呗</a></li>
+						<li><a href="#">货到付款</a></li>
+					</ul>
+				</li>
+				<li>商家服务
+					<ul class="ul_child">
+						<li><a href="#">商家入驻</a></li>
+						<li><a href="#">商家中心</a></li>
+						<li><a href="#">天猫智库</a></li>
+						<li><a href="#">天猫规则</a></li>
+						<li><a href="#">物流服务</a></li>
+						<li><a href="#">喵言喵语</a></li>
+						<li><a href="#">运营维护</a></li>
+					</ul>
+				</li>
+				<li>手机天猫
+					<ul class="ul_child">
+						<li><img src="images/天猫/TB105-105.png" alt="二维码"></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="last">
+			<ul class="ul1">
+				<li><a href="#">关于天猫</a></li>
+				<li><a href="#">帮助中心</a></li>
+				<li><a href="#">开放平台</a></li>
+				<li><a href="#">诚聘英才</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">网站合作</a></li>
+				<li><a href="#">法律声明</a></li>
+				<li><a href="#">知识产权</a></li>
+				<li><a href="#">廉政举报</a></li>
+			</ul>
+			<p class="p1">
+				<a href="#">阿里巴巴集团</a><span>|</span><a href="#">淘宝网</a><span>|</span><a href="#">天猫</a><span>|</span><a href="#">聚划算</a><span>|</span><a href="#">全球速卖通</a><span>|</span><a href="#">阿里巴巴国际交易市场</a><span>|</span><a href="#">1688</a><span>|</span><a href="#">阿里妈妈</a><span>|</span><a href="#">飞猪</a><span>|</span><a href="#">阿里云计算</a><span>|</span><a href="#">YunOS</a><span>|</span><a href="#">阿里通讯</a><span>|</span><a href="#">万网</a><span>|</span><a href="#">高德</a><span>|</span><a href="#">UC</a><span>|</span><a href="#">友盟</a><span>|</span><a href="#">虾米</a><span>}</span><a href="#">阿里星球</a><span>|</span><a href="#">来往</a><span>|</span><a href="#">钉钉</a><span>|</span><a href="#">支付宝</a>
+			</p>
+			<p class="p2">
+				<span>增值电信业务许可证：浙B2-20110446</span>
+				<span>网络文化经营许可证：浙网文[2015]0295-065号</span>
+				<span>互联网医疗保健信息服务 审核同意书 浙卫网审【2014】6号 </span>
+			</p>
+			<p class="p3">互联网药品信息服务资质证书编号：浙-（经营性）-2012-0005</p>
+			<p class="p4">&copy;2003-2016 TMALL.COM 版权所有</p>
+		</div>
+	</div>
+	<div id="bg"></div>
+	<div id="leaguer_border"></div>
+	<div id="leaguer">
+		<div class="top"></div>
+		<div id="bottom">
+			<img src="images/天猫/3.png" alt="扫码登入" onclick="changePage(this)" />
+			<h3>密码登入</h3>
+			<form action="" method="get">
+				<div class="username">
+					<label for="txt1">
+						<div class="people"></div>
+					</label>
+					<div class="txt">
+						<input type="text" id="txt1" placeholder="手机号/会员名/邮箱" onfocus="showOutline(this)" onblur="hideOutline(this)" />
+					</div>
+				</div>
+				<div class="password">
+					<label for="txt2">
+						<div class="lock"></div>
+					</label>
+					<div class="txt">
+						<input type="text" id="txt2" onfocus="showOutline(this)" onblur="hideOutline(this)" />
+					</div>
+				</div>
+				<input id="btn" onclick="hideLeaguer()" type="submit" value="登入" />
+			</form>
+			<p>
+				<a href="#">忘记密码</a>
+				<a href="#">免费注册</a>
+			</p>
+		</div>
+		<div id="bottom_copy">
+			<img src="images/天猫/4.png" alt="扫码登入" onclick="changePage(this)" />
+			<h3>手机扫码，登入安全</h3>
+			<div id="img" onclick="hideLeaguer()"></div>
+			<div class="next_img">
+				<div class="bz"></div>
+				<p>
+					打开 <a href="#">手机天猫</a><span>|</span><a href="#">手机淘宝</a><br />
+					扫一扫登入
+				</p>
+			</div>
+			<p>
+				<a href="#" onclick="changePage1(this)">账号登入</a>
+				<a href="#">免费注册</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

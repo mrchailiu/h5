@@ -1,0 +1,13 @@
+
+#case{
+	padding: 40px 0;
+	background: #eee;
+	text-align: center;
+}
+#case h4{
+	color: #666;
+}
+#case p{
+	color: #666;
+	line-height: 1.6;
+}

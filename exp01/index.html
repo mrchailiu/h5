@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>这是我的第一个网页</title>
+		<!-- 引入样式文件 -->
+		<link rel="stylesheet" href="css/index.css" />
+		<style>
+			#map{
+				background-color:#ff6700;				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title">三国战纪</div>
+		<div class="container">
+			<canvas id="map">游戏地图</canvas>
+			<canvas id="role">人物</canvas>
+		</div>
+		<div>按下X键呼出操作说明</div>
+		<!-- 操作说明层 -->
+		<div class="help">
+			<div>操作说明</div>
+			<div>
+				<p>left:向左移动</p>
+				<p>right:向右移动</p>
+				<p>A:攻击</p>
+			</div>
+			<div>
+				<button class="btn">关闭</button>
+			</div>
+		</div>
+		<!-- 遮罩层 -->
+		<div id="wrap"></div>
+		<!-- 引入脚本文件 -->
+		<script src="js/game.js"></script>
+	</body>
+</html>

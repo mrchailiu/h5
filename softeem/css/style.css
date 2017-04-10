@@ -1,0 +1,452 @@
+body{
+    margin: 0;
+}
+a{
+    text-decoration:none;
+}
+ul,li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/*head-logo，使用margin调整顶端Logo的位置*/
+.head-logo {
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 8%;
+}
+/*head-logo img，使用width：100%使图片铺满屏幕，并自适应浏览器宽度*/
+.head-logo img{
+    width: 100%;
+}
+/*
+**wrap 为顶端logo下的banner图片展示区
+**设置图片自适应
+**img display：block 用以去除图片下方的空白区域
+*/
+.wrap-bar{
+    margin-top: 1%;
+}
+
+.wrap-bar img{
+    display: block;
+    width: 100%;
+}
+/*
+**cut-off为各模块间的分割区域
+*/
+.cut-off{
+    background-color: #eeeeee;
+}
+hr{
+    margin: 0;
+    border: 0;
+    border-top: 2px solid #eeeeee;
+}
+/*
+**hot-class
+**以下内容为热门模块的样式
+**使用margin调整位置
+**图片自适应
+*/
+.class-line-two, .class-line-one{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.class-line-two div, .class-line-one div{
+    text-align: center;
+}
+.class-img-line-one{
+    width: 100%;
+    margin-bottom: 18%;
+}
+.class-img-line-two{
+    max-width: 100%;
+    margin-bottom: 18%;
+}
+.class-img{
+    display: inline-block;
+    width: 16.75%;
+    margin-left: 6.9%
+}
+.class-img-left{
+    display: inline-block;
+    width: 16.75%;
+    margin-left: 5%
+}
+/*
+**下面内容为报名情况模块
+**设置图片响应式
+*/
+.sign-status img{
+    padding-left: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 8%;
+}
+.sign-status-slider{
+    display: inline-block;
+    overflow: hidden;
+    margin-bottom: 1%;
+    margin-left: 0.8%;
+}
+/*
+**Job-show
+**下面区域为就业情况模块
+**图片自适应
+*/
+.job-show {
+    position: relative;
+}
+.job-show img{
+    width: 100%;
+}
+.job-show-one img{
+    margin-top: 1%;
+}
+.job-show-img{
+    position: absolute;
+    max-width: 24%;
+    z-index: 2;
+    top:10%;
+    left: 5.5%;
+}
+.job-info{
+    display: inline-block;
+    position: absolute;
+    top: 6%;
+    left: 38%;
+}
+.job-info-name{
+    margin-bottom: 0;
+    display: inline-block;
+}
+/*
+**下面区域为金牌讲师模块
+**设置图片自适应
+*/
+.gold-teacher-line-one, .gold-teacher-line-two{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+/*
+**以下内容为新闻头条模块
+*/
+.top-new-wrap{
+    position: relative;
+}
+.slider{
+    position: relative;
+    margin-left: 5%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    overflow: hidden;
+}
+.slider-list{
+    position: absolute;
+
+}
+.slider-bottom{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    bottom: 0;
+    padding: 1%;
+    background-color: rgba(58,115,200,0.7);
+    color: #ffffff;
+}
+
+#buttons{
+    position: absolute;
+    padding: 2%;
+    right: 0;
+    bottom: 0;
+}
+
+#buttons span {
+    cursor: pointer;
+    float: left;
+    border: 1px solid #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin-right: 5px;
+}
+
+#buttons .on{
+    background: orangered;
+}
+.slider-list img{
+    display: block;
+    float: left;
+}
+.slider a{
+    visibility: hidden;
+}
+.top-new-article{
+    position: absolute;
+    left: 44%;
+    width: 51%;
+    top: 0;
+}
+.top-new-article a{
+    color: black;
+}
+.top-new-button-wrap{
+    width: 100%;
+    max-width: 100%;
+}
+.top-new-button-one{
+    position: absolute;
+    width: 29%;
+    top: 0;
+    left: 2%;
+    z-index: 5;
+}
+.top-new-button-two{
+    position: absolute;
+    width: 29%;
+    top: 0;
+    left: 31.5%;
+    z-index: 5;
+}
+.top-new-button-title-one{
+    width: 27%;
+    position: absolute;
+    text-align: center;
+
+    margin: 0;
+    top: 0;
+    left: 3%;
+
+    z-index: 8;
+}
+.top-new-button-title-two{
+    width: 27%;
+    position: absolute;
+    text-align: center;
+
+    margin: 0;
+    top: 0;
+    left: 32.5%;
+
+    z-index: 8;
+}
+.line-one{
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    top: 21%;
+    z-index: 6;
+}
+.line-two{
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    top: 60%;
+    z-index: 6;
+}
+.line-three{
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    top: 100%;
+    z-index: 6;
+}
+.top-softeem p{
+    margin-left: 4%;
+}
+.top-new-title{
+    margin-top: 5%;
+    margin-bottom: 0;
+
+}
+.top-new-information{
+    margin-top: 2%;
+
+    text-indent: 2em;
+    color: #999999;
+}
+/*.top-new-detail-link-one{
+    position: absolute;
+    font-size: 18px;
+    right: 3%;
+    top: 48%;
+    z-index: 9;
+}
+.top-new-detail-link-two{
+    position: absolute;
+    font-size: 18px;
+    right: 3%;
+    top: 84.5%;
+    z-index: 9;
+}*/
+/*
+**下方为软帝宣传语模块
+*/
+.softeem-slogan{
+    position: relative;
+}
+
+.softeem-slogan-wrap{
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.slogan{
+    max-width: 56%;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+.slogan-link{
+    max-width: 30%;
+    position: absolute;
+    top:78%;
+    left: 20%;
+}
+/*
+**下方为信息提交模块
+*/
+.sign-form{
+    position: relative;
+    background-color: #eeeeee;
+}
+.sign-form-wrap{
+    position: relative;
+    width: 100%;
+    display: block;
+}
+.sign-form-img-one{
+    position: absolute;
+    top: 7%;
+    left: 38%;
+    max-width: 20%;
+}
+.sign-form-img-two{
+    position: absolute;
+    top:11%;
+    left: 41.6%;
+    max-width: 13%;
+}
+.sign-form-img-three{
+    position: absolute;
+    top:13.5%;
+    left: 37%;
+    max-width: 22%;
+}
+
+.submit-form{
+    position: absolute;
+    top: 24%;
+    left: 10%;
+    width: 80%;
+}
+#sign-form{
+    outline: 0;
+    font-size: 40px;
+}
+#sign-form input{
+    height: 92px;
+    width: 100%;
+    border: 2px solid #999999;
+    border-radius: 8px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+#sign-form img{
+    width: 100%;
+    margin-top: 4%;
+}
+
+.information{
+    background-color: #eeeeee;
+    position: relative;
+}
+.information img{
+    width: 100%;
+    display: block;
+}
+.footer-info-link{
+    position: absolute;
+    top: 12%;
+    width: 100%;
+}
+.footer-info-link p{
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+.footer-info-link a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.footer-info-detail{
+    position: absolute;
+    width: 100%;
+    color: #ffffff;
+    top: 44%;
+    text-align: center;
+}
+.cut-off-biger{
+    display: block;
+    width: 100%;
+}
+.footer-buttons{
+    position: relative;
+    width: 100%;
+    background-color: black;
+    /*background-color: #3a73c8;*/
+}
+.footer-buttons img{
+
+    display: block;
+    float: left;
+}
+
+.footer-buttons-wrap-left{
+    width: 29.33%;
+}
+.footer-buttons-wrap-center{
+    width: 40.33%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+}
+.footer-buttons-wrap-right{
+    width: 29.33%;
+}
+.footer-buttons-online{
+    position: absolute;
+    width: 7%;
+    top: 14%;
+    left: 11.5%;
+}
+.footer-buttons-tel{
+    position: absolute;
+    width: 7%;
+    top: 14%;
+    left: 47%;
+}
+.footer-buttons-back-top{
+    position: absolute;
+    width: 7%;
+    top: 14%;
+    left: 82%;
+}
+.module-title{
+    margin-top: 3%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+
+}
+.module-title span{
+    color: #999999;
+    margin-left: 1.5%;
+}
+
+

@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>天猫国际</title>
+	<link rel="stylesheet" href="css/tianmaoguoji.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript">
+		var index=-750;
+		$(document).ready(function(){
+			var y=$("#ul_image li:first a img").attr("src");
+				if(y.match("TB8")){
+					$("#middle").css("backgroundColor","#3EA2CB");
+				} 
+				else if(y.match("TB9")){
+					$("#middle").css("backgroundColor","#CDF8FD");
+				}
+				else{
+					$("#middle").css("backgroundColor","#FFF0C7");
+				}
+			var a=function(){
+				$("#ul_image li:first").animate({"margin-left":index+"px"},1000,function(){
+					var s=$("#ul_image li:first a img").attr("src");
+					if(s.match("TB8")){
+						// $('#middle').animate({"backgroundColor","#CDF8FD"},1000);
+						$("#middle").css("backgroundColor","#CDF8FD");
+					}
+					else if(s.match("TB9")){
+						// $('#middle').animate({"backgroundColor","#FFF0C7"},1000);
+						$("#middle").css("backgroundColor","#FFF0C7");
+					}
+					else{
+						// $('#middle').animate({"backgroundColor","#3EA2CB"},1000);
+						$("#middle").css("backgroundColor","#3EA2CB");
+					}
+					$("#ul_image li:first").remove();
+					$("#ul_image").append("<li><a href='#'><img src='"+s+"' /></a></li>");
+				});
+			}
+			setInterval(a,3000);
+
+			$(".ul_nav2 li:first").hover(function(){
+				$(this).children("a").css("color","red");
+				$(this).css("backgroundColor","white");
+				$(".ul_nav2 .ul_child").stop().slideDown();
+
+			},function(){
+				$(this).children("a").css("color","#999");
+				$(this).css("backgroundColor","#f2f2f2");
+				$(".ul_nav2 .ul_child").stop().slideUp();
+			});
+
+		})
+	</script>
+</head>
+<body>
+	<div class="header">
+		<span class="span1"><a href="天猫首页.html">天猫首页</a></span>
+		<span class="span2">喵，欢迎来天猫国际</span>
+		<ul class="ul_nav1" id="ul_a">
+			<li><a href="#">请登入</a></li>
+		</ul>
+		<ul class="ul_nav2">
+			<li><a href="#">
+					我的淘宝 <img src="images/天猫/三角.png" alt="三角形" />
+				</a>
+				<ul class="ul_child">
+					<li><a href="#">已买到的宝贝</a></li>
+					<li><a href="#">已卖出的宝贝</a></li>
+				</ul>
+			</li>
+			<li><a href="#">我关注的品牌</a></li>
+		</ul>
+		<ul class="ul_nav3">
+			<li><a href="#">购物车</a></li>
+			<li><a href="#">收藏夹</a></li>
+			<li><a href="#">手机版</a></li>
+			<li><a href="#">淘宝网</a></li>
+			<li><a href="#">企业网</a></li>
+		</ul>
+		<ul class="ul_nav4">
+			<li><a href="#">商家支持</a></li>
+			<li><a href="#">网站导航</a></li>
+		</ul>
+	</div>
+	<div class="search">
+		<img src="images/天猫国际/TB1-116-40.png" alt="天猫国际" />
+		<img src="images/天猫国际/TB2-175-16.png" alt="原装进口世界" />
+		<div class="right">
+			<div class="top">
+				<form action="" method="get">
+					<input type="text" placeholder="冬季热销款围巾" />
+					<input type="button" value="搜索" />
+				</form>
+			</div>
+			<p>
+				<span><a href="#">玫瑰水</a></span><span>|</span>
+				<span><a href="#">维骨力</a></span><span>|</span>
+				<span><a href="#">鱼油</a></span><span>|</span>
+				<span><a href="#">花王</a></span><span>|</span>
+				<span><a href="#">贝拉米</a></span><span>|</span>
+				<span><a href="#">玛卡</a></span><span>|</span>
+				<span><a href="#">左旋肉碱</a></span><span>|</span>
+				<span><a href="#">防晒霜</a></span>
+			</p>
+		</div>
+	</div>
+	<div class="main">
+		<div class="top">
+			<div class="left">
+				全部商品分类
+			</div>
+			<p class="p1">
+				<span><a href="天猫首页.html">首页</a></span>
+				<span><a href="#">全球旗舰店</a></span>
+				<span><a href="#">全球精选</a></span>
+				<span><a href="#">国家地区馆</a></span>
+				<span><a href="#">官网直售</a></span>
+			</p>
+			<p class="p2">
+				<a href="#">关于我们</a>
+			</p>
+		</div>
+		<div id="middle">
+			<div class="left">
+				<ul class="nav">
+					<li>
+						<h2>
+							美妆个护
+						</h2>
+						<p>
+							<a href="#">面膜</a> <span>/</span> <a href="#">防晒</a> <span>/</span> <a href="#">面部护理套装</a>
+						</p>
+					</li>
+					<li>
+						<h2 style="background-image:url('images/天猫国际/TB4-48-48.png')">食品保健</h2>
+						<p>
+							<a href="#">代餐奶昔</a> <span>/</span> <a href="#">酵素</a> <span>/</span> <a href="#">葡萄酒</a>
+						</p>
+					</li>
+					<li>
+						<h2 style="background-image:url('images/天猫国际/TB5-52-52.png')">母婴用品</h2>
+						<p>
+							<a href="#">奶粉</a> <span>/</span> <a href="#">纸尿裤</a> <span>/</span> <a href="#">钙铁锌</a>
+						</p>
+					</li>
+					<li>
+						<h2 style="background-image:url('images/天猫国际/TB6-48-48.png')">服饰鞋包</h2>
+						<p>
+							<a href="#">手表</a> <span>/</span> <a href="#">运动鞋</a> <span>/</span> <a href="#">箱包</a>
+						</p>
+					</li>
+					<li>
+						<h2 style="background-image:url('images/天猫国际/TB7-48-48.png')">生活/数码</h2>
+						<p>
+							<a href="#">滤水壶</a>
+							<span>/</span> 
+							<a href="#">滤芯</a> 
+							<span>/</span> 
+							<a href="#">扫地机器人</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="center">
+				<ul id="ul_image">
+					<li><a href="#">
+						<img src="images/天猫国际/TB8-750-420.jpg" alt="">
+					</a></li>
+					<li><a href="#">
+						<img src="images/天猫国际/TB9-750-420.jpg" alt="">
+					</a></li>
+					<li><a href="#">
+						<img src="images/天猫国际/TB10-750-420.jpg" alt="">
+					</a></li>
+				</ul>
+			</div>
+			<div class="right">
+				<div class="top">
+					<span>识货</span>
+					<h2>Discovery</h2>
+					<img src="images/天猫国际/TB11-38-11.jpg" alt="" />
+				</div>
+				<div class="bottom"></div>
+				<h2>日本力士护发素</h2>
+				<p>
+					不含硅油成分，可以避免发丝毛鳞堵塞减少了头皮发痒，头屑...
+				</p>
+			</div>
+		</div>
+		<div class="bottom">
+			<a href="#">
+				<img src="images/天猫国际/TB13.png" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="content">
+		<div class="area1">
+			<div class="top">
+				<h2>全球精选</h2>
+				<h3>极速发货</h3>
+				<h3>全球底价</h3>
+				<a href="#">更多〉</a>
+			</div>
+			<div class="bottom">
+				<ul class="images">
+					<li>
+						<div class="jiantou">
+							<b class="b1">2</b>
+							<b class="b2">.2</b>
+							<p>折</p>
+						</div>
+						<a href="#">
+							<img src="images/天猫国际/TB14.jpg_.webp" alt="li1">
+						</a>
+						<div class="txt">
+							<p class="p1">
+								<img src="images/天猫国际/TB15.jpg_.webp" alt="">
+								台湾品牌
+							</p>
+							<p class="p2">
+								【领券买2减20】补水嘉年...
+							</p>
+							<p class="p3">
+								领券买2减20,统一旗下品牌 官方旗舰店 保税区直达 海关监管发货,补水保湿 精选
+							</p>
+							<div class="last">
+								<p class="p4">
+								<span class="span1">¥</span>
+								<span class="span2">79</span>
+								<span class="span3">
+									<del>¥369.00</del>
+								</span><br />
+								<span class="span4">
+									已售1064件
+								</span>
+								</p>
+								<a href="#">马上抢</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="jiantou">
+							<b class="b1">3</b>
+							<b class="b2">.9</b>
+							<p>折</p>
+						</div>
+						<a href="#">
+							<img src="images/天猫国际/TB17.jpg_.webp" alt="li1">
+						</a>
+						<div class="txt">
+							<p class="p1">
+								<img src="images/天猫国际/TB16.jpg_.webp" alt="">
+								意大利品牌
+							</p>
+							<p class="p2">
+								意大利药妆粉底液敏感肌隔...
+							</p>
+							<p class="p3">
+								安全 无毒无害 欧盟药品检测标准,意大利传承166年药企制造 来自西西里的美丽传
+							</p>
+							<div class="last">
+								<p class="p4">
+								<span class="span1">¥</span>
+								<span class="span2">148</span>
+								<span class="span3">
+									<del>¥382.00</del>
+								</span><br />
+								<span class="span4">
+									已售244件
+								</span>
+								</p>
+								<a href="#">马上抢</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="jiantou">
+							<b class="b1">2</b>
+							<b class="b2">.9</b>
+							<p>折</p>
+						</div>
+						<a href="#">
+							<img src="images/天猫国际/TB18.jpg_.webp" alt="li1">
+						</a>
+						<div class="txt">
+							<p class="p1">
+							<img src="images/天猫国际/TB19.jpg_.webp" alt="">
+							韩国品牌
+							</p>
+							<p class="p2">
+								韩国泡泡洁面慕斯-洗面奶1...
+							</p>
+							<p class="p3">
+								新品精华泡泡洁面慕斯，众多客户一致点赞,温和不紧绷 保湿滋养 祛黑头 长期使
+							</p>
+							<div class="last">
+								<p class="p4">
+								<span class="span1">¥</span>
+								<span class="span2">62</span>
+								<span class="span3">
+									<del>¥218.00</del>
+								</span><br />
+								<span class="span4">
+									已售144件
+								</span>
+								</p>
+								<a href="#">马上抢</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="jiantou">
+							<b class="b1">3</b>
+							<b class="b2">.6</b>
+							<p>折</p>
+						</div>
+						<a href="#">
+							<img src="images/天猫国际/TB20.jpg_.webp" alt="li1">
+						</a>
+						<div class="txt">
+							<p class="p1">
+							<img src="images/天猫国际/TB19.jpg_.webp" alt="">
+							韩国品牌
+							</p>
+							<p class="p2">
+								【买2减20】春雨水光嫩白...
+							</p>
+							<p class="p3">
+								买2件领券立减20元 仅限11月30日-12月2日,买3件领券立减40元 仅限11月30
+							</p>
+							<div class="last">
+								<p class="p4">
+								<span class="span1">¥</span>
+								<span class="span2">99</span>
+								<span class="span3">
+									<del>¥270.60</del>
+								</span><br />
+								<span class="span4">
+									已售87件
+								</span>
+								</p>
+								<a href="#">马上抢</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="jiantou">
+							<b class="b1">4</b>
+							<b class="b2">.5</b>
+							<p>折</p>
+						</div>
+						<a href="#">
+							<img src="images/天猫国际/TB21.jpg_.webp" alt="li1">
+						</a>
+						<div class="txt">
+							<p class="p1">
+							<img src="images/天猫国际/TB19.jpg_.webp" alt="">
+							韩国品牌
+							</p>
+							<p class="p2">
+								【领券立减10】洗面奶调理...
+							</p>
+							<p class="p3">
+								前50名领券立减20,全新清洁两件套，买2送1,韩国明星在用的一款高性价的调理
+							</p>
+							<div class="last">
+								<p class="p4">
+								<span class="span1">¥</span>
+								<span class="span2">139</span>
+								<span class="span3">
+									<del>¥200.00</del>
+								</span><br />
+								<span class="span4">
+									已售26件
+								</span>
+								</p>
+								<a href="#">马上抢</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="top">
+			<div class="left">
+				<img src="images/天猫国际/TB23.png" alt="" />
+				<p class="p1">客服服务热线：</p>
+				<p class="p2">
+					<span class="span1">中国大陆：</span>
+					<span class="span2">400-843-2288</span>
+				</p>
+				<p class="p2">
+					<span class="span1">香港：</span>
+					<span class="span2">&nbsp;&nbsp;&nbsp;&nbsp;852-22155002</span>
+				</p>
+				<p class="p2">
+					<span class="span1">台湾：</span>
+					<span class="span2">&nbsp;&nbsp;&nbsp;&nbsp;886-2770543006</span>
+				</p>
+				<p class="p1">工作时间：</p>
+				<p class="p3">
+					<span>中国大陆 周一到周日 09:00 - 18:00</span>
+					<br />
+					<span>香港台灣 周一到周五 09:00 - 18:00</span>
+				</p>
+				<p class="p4">问题反馈</p>
+			</div>
+			<div class="center">
+				<div class="image"></div>	
+				<p>扫一扫，品质在手</p>
+			</div>
+			<div class="right">
+				<ul class="nav">
+					<li>服务保障
+						<ul class="nav_copy">
+							<li><a href="#">正品保障</a></li>
+							<li><a href="#">海外直供</a></li>
+							<li><a href="#">环球必达</a></li>
+							<li><a href="#">国内退货</a></li>
+							<li><a href="#">七天放心退</a></li>
+						</ul>
+					</li>
+					<li>消费者指南
+						<ul class="nav_copy">
+							<li><a href="#">新手入门</a></li>
+							<li><a href="#">购买流程</a></li>
+							<li><a href="#">常见问题</a></li>
+							<li><a href="#">帮助中心</a></li>
+							<li><a href="#">联系客服</a></li>
+						</ul>
+					</li>
+					<li>支付方式
+						<ul class="nav_copy">
+							<li><a href="#">开通支付宝</a></li>
+							<li><a href="#">实名认证</a></li>
+							<li><a href="#">支付宝充值</a></li>
+							<li><a href="#">支付宝快捷支付</a></li>
+							<li><a href="#">支付宝余额支付</a></li>
+						</ul>
+					</li>
+					<li>商家支持
+						<ul class="nav_copy">
+							<li><a href="#">天猫国际规则</a></li>
+							<li><a href="#">环球学堂</a></li>
+							<li><a href="#">服务商介绍</a></li>
+							<li><a href="#">商标代理</a></li>
+							<li><a href="#">喵言喵语</a></li>
+							<li><a href="#">菜鸟物流</a></li>
+							<li><a href="#">问题反馈</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom">
+			<p id="p1">
+				<a href="#">阿里巴巴集团</a>
+				<span>|</span>
+				<a href="#">淘宝网</a>
+				<span>|</span>
+				<a href="#">天猫</a>
+				<span>|</span>
+				<a href="#">聚划算</a>
+				<span>|</span>
+				<a href="#">全球速通</a>
+				<span>|</span>
+				<a href="#">阿里巴巴国际交易市场</a>
+				<span>|</span>
+				<a href="#">1688</a>
+				<span>|</span>
+				<a href="#">阿里妈妈</a>
+				<span>|</span>
+				<a href="#">去啊</a>
+				<span>|</span>
+				<a href="#">阿里云计算</a>
+				<span>|</span>
+				<a href="#">YuanOS</a>
+				<span>|</span>
+				<a href="#">阿里通讯</a>
+				<span>|</span>
+				<a href="#">万网</a>
+				<span>|</span>
+				<a href="#">高德</a>
+				<span>|</span>
+				<a href="#">优视</a>
+				<span>|</span>
+				<a href="#">友盟</a>
+				<span>|</span>
+				<a href="#">酷盘</a>
+				<span>|</span>
+				<a href="#">虾米</a>
+				<span>|</span>
+				<a href="#">天天动听</a>
+				<span>|</span>
+				<a href="#">来往</a>
+				<span>|</span>
+				<a href="#">支付宝</a>
+				<span>|</span>
+				<a href="#">钉钉</a>
+			</p>
+			<p id="p2">
+				&copy; 2013-2016 Taobao China Holding Limited. 版权所有
+				<span>
+					<a href="#">隐私权政策</a>
+					|
+					<a href="#">用户服务协议</a>
+					|
+					<a href="#">条款规定</a>
+				</span>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
